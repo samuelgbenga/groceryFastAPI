@@ -149,3 +149,5 @@ def remove_quantity(item_id: int, quantity: int):
     else:
         redis_client.hincrby(f"item_id:{item_id}","quantity", -quantity)
         return {"result": f"{quantity} items removed."}
+    
+    
